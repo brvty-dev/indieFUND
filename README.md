@@ -1,1 +1,1 @@
-# IndieFund
+# IndieFUND
