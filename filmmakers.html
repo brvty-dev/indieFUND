@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>indieFUND</title>
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+      <meta name="description" content="Where fans fund films">
+      <meta name="keywords" content="indie fund, indiefund, where fans fund films, film investment, film fund, filmmaking, crowd funding, film distribution, profit share">
+
+      <meta property="og:title" content="This is indieFUND">
+      <meta property="og:url" content="https://www.indiefund.co.uk">
+      <meta property="og:description" content="Where fans fund films">
+      <meta property="og:image" content="https://www.indiefund.co.uk/assets/images/indie_fund_header.png">
+      <meta property="og:site_name" content="indieFUND">
+      <meta property="og:locale" content="en_GB">
+      <meta property="og:image:type" content="image/jpeg">
+      <meta property="og:type" content="website">
+
+      <meta name="twitter:title" content="indieFUND">
+      <meta name="twitter:description" content="Where fans fund films">
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:image" content="https://www.indiefund.co.uk/assets/images/indie_fund_header.png">
+      <meta name="twitter:image:alt" content="indieFUND">
+      <meta name="twitter:site" content="@indiefund">
+
+          <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+          <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
+          <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+          <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/apple-touch-icon-57x57.png">
+          <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/apple-touch-icon-72x72.png">
+          <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/apple-touch-icon-76x76.png">
+          <link rel="apple-touch-icon" sizes="114x114" href="assets/icons/apple-touch-icon-114x114.png">
+          <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/apple-touch-icon-120x120.png">
+          <link rel="apple-touch-icon" sizes="144x144" href="assets/icons/apple-touch-icon-144x144.png">
+          <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/apple-touch-icon-152x152.png">
+          <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon-180x180.png">
+
+              <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Road+Rage&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="assets/stylesheets/style.css" type="text/css">
+
+          <script src="https://kit.fontawesome.com/04887afb98.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">
+            &times;
+          </span>
+            <h2 class="footer_logo_text love-ya-like-a-sister-regular">
+              indieFUND
+            </h2>
+        </div>
+        <div class="modal-body">
+            <h3>
+                Request an information pack
+            </h3>
+              <form 
+                    action="assets/php/request.php" 
+                    method="post" 
+                    name="contact_form" 
+                    onsubmit="return validateForm()" 
+                    autocomplete="on"
+                >
+                    <label for="message" class="sr-only">
+                        Title
+                    </label>
+                    <input 
+                        type="text" 
+                        id="message" 
+                        name="message" 
+                        maxlength="100" 
+                        placeholder="Please provide your title.." 
+                        required
+                    >
+                    <label for="fname" class="sr-only">
+                        First Name
+                    </label>
+                    <input 
+                        type="text" 
+                        id="fname" 
+                        name="fname" 
+                        maxlength="15" 
+                        placeholder="First name.." 
+                        pattern="[A-Za-z-']{2,}" 
+                        title="Cannot contain numbers or symbols except ' or -" 
+                        required
+                    >
+                    <label for="lname" class="sr-only">
+                        Last Name
+                    </label>
+                    <input 
+                        type="text" 
+                        id="lname" 
+                        name="lname" 
+                        maxlength="20" 
+                        placeholder="Last name.." 
+                        pattern="[A-Za-z-']{2,}" 
+                        title="Cannot contain numbers or symbols except ' or -" 
+                        required
+                    >
+                    <label for="email" class="sr-only">
+                        Email
+                    </label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        maxlength="50" 
+                        placeholder="Email address.." 
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                        title="Must be a valid email address" 
+                        required
+                    >
+                    <label for="subject" class="sr-only">
+                        Subject
+                    </label>
+                    <input 
+                        type="text" 
+                        id="subject" 
+                        name="subject" 
+                        maxlength="12" 
+                        placeholder="Investor, Filmmaker or Distributor?" 
+                        required 
+                    >
+                        <label for="confirm">
+                            I agree to 
+                                <span class="love-ya-like-a-sister-regular">
+                                    indieFUND's 
+                                </span>
+                                    <a class="white" href="terms.html" target="_blank">
+                                        Terms of service
+                                    </a>
+                        </label>
+                            <input 
+                                type="checkbox" 
+                                id="confirm" 
+                                name="confirm" 
+                                value="confirm" 
+                                required
+                            >
+                    <input 
+                        type="submit" 
+                        formenctype="application/x-www-form-urlencoded" 
+                        value="Request"
+                    >
+                </form>
+        </div>
+        <div class="modal-footer">
+          <h3 class="tag_line_text roboto-text">
+              Where fans fund films
+          </h3>
+        </div>
+      </div>
+    </div>
+    <header>
+      <h2 class="enquire_text road-rage-regular modalBtn">
+          Enquire
+      </h2>
+        <a href="index.html">
+            <h1 class="main_logo_text love-ya-like-a-sister-regular">
+                indieFUND
+            </h1>
+        </a>
+          <h2 class="tag_line_text roboto-text">
+              Where fans fund films
+          </h2>
+    </header> 
+    <nav class="filmmakers_nav" id="info">
+      <a href="investors.html#info">
+          <h2 class="investor_text filmmakers_nav roboto-categories">
+              INVESTORS
+          </h2>
+      </a>
+          <br>
+      <a href="filmmakers.html#info">
+          <h2 class="filmmakers_text roboto-categories">
+              FILMMAKERS
+          </h2>
+      </a>
+          <br>
+      <a href="distributors.html#info">
+          <h2 class="distributors_text filmmakers_nav roboto-categories">
+              DISTRIBUTORS
+          </h2>
+      </a>
+    </nav>
+    <main>
+      <div class="info_slide info_page">
+        <div class="row">
+          <div class="column side">
+            <h3>
+              Want investment for your feature film?
+            </h3>
+              <p>
+                <span class="green love-ya-like-a-sister-regular">
+                    indieFUND
+                </span> 
+                provides established producers with:
+              </p>
+          </div>
+          <div class="column middle">
+            <ul>
+              <li>
+                A new source of funding
+              </li>
+              <li>
+                Recoupment support
+              </li>
+              <li>
+                Investment contracts
+              </li>
+              <li>
+                Pre-release marketing
+              </li>
+              <li>
+                Audience insight
+              </li>
+              <li>
+                Parity with industry standard rates of return
+              </li>
+              <li>
+                Gap-finance accredited assets
+              </li>
+              <li>
+                Autonomy
+              </li>
+            </ul>
+          </div>
+        </div>
+          <p>
+            Want to know more? <span class="modalBtn road-rage-regular">Request</span> an information pack.
+          </p>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <a href="about.html#info">
+            About
+        </a>
+          <span class="dots">
+              &sdot;
+          </span>
+            <a href="index.html" class="footer_logo_text love-ya-like-a-sister-regular">
+              indieFUND
+            </a>
+          <span class="dots">
+              &sdot;
+          </span>
+        <a href="terms.html#terms_info">
+            Terms
+        </a>
+      </div>
+        <span class="toTop">
+            &#8673;
+        </span>
+      <br>
+    </footer>
+      <script src="assets/js/modal.js"></script>
+      <script src="assets/js/to_top.js"></script>
+  </body>
+</html>
