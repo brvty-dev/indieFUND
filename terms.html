@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>indieFUND</title>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <meta name="description" content="Where fans fund films">
+        <meta name="keywords" content="indie fund, indiefund, where fans fund films, film investment, film fund, filmmaking, crowd funding, film distribution, profit share">
+
+        <meta property="og:title" content="This is indieFUND">
+        <meta property="og:url" content="https://www.indiefund.co.uk">
+        <meta property="og:description" content="Where fans fund films">
+        <meta property="og:image" content="https://www.indiefund.co.uk/assets/images/indie_fund_header.png">
+        <meta property="og:site_name" content="indieFUND">
+        <meta property="og:locale" content="en_GB">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:type" content="website">
+
+        <meta name="twitter:title" content="indieFUND">
+        <meta name="twitter:description" content="Where fans fund films">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="https://www.indiefund.co.uk/assets/images/indie_fund_header.png">
+        <meta name="twitter:image:alt" content="indieFUND">
+        <meta name="twitter:site" content="@indiefund">
+
+            <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+            <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
+            <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+            <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/apple-touch-icon-57x57.png">
+            <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/apple-touch-icon-72x72.png">
+            <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/apple-touch-icon-76x76.png">
+            <link rel="apple-touch-icon" sizes="114x114" href="assets/icons/apple-touch-icon-114x114.png">
+            <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/apple-touch-icon-120x120.png">
+            <link rel="apple-touch-icon" sizes="144x144" href="assets/icons/apple-touch-icon-144x144.png">
+            <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/apple-touch-icon-152x152.png">
+            <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon-180x180.png">
+
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Road+Rage&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga&display=swap" rel="stylesheet">
+                <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+                <link rel="stylesheet" href="assets/stylesheets/style.css" type="text/css">
+  </head>
+  <body>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">
+            &times;
+          </span>
+            <h2 class="footer_logo_text love-ya-like-a-sister-regular">
+              indieFUND
+            </h2>
+        </div>
+        <div class="modal-body">
+            <h3>
+                Request an information pack
+            </h3>
+              <form 
+                  action="assets/php/request.php" 
+                  method="post" 
+                  name="contact_form" 
+                  onsubmit="return validateForm()" 
+                  autocomplete="on"
+              >
+                  <label for="message" class="sr-only">
+                      Title
+                  </label>
+                  <input 
+                      type="text" 
+                      id="message" 
+                      name="message" 
+                      maxlength="100" 
+                      placeholder="Please provide your title.." 
+                      required
+                  >
+                  <label for="fname" class="sr-only">
+                      First Name
+                  </label>
+                  <input 
+                      type="text" 
+                      id="fname" 
+                      name="fname" 
+                      maxlength="15" 
+                      placeholder="First name.." 
+                      pattern="[A-Za-z-']{2,}" 
+                      title="Cannot contain numbers or symbols except ' or -" 
+                      required
+                  >
+                  <label for="lname" class="sr-only">
+                      Last Name
+                  </label>
+                  <input 
+                      type="text" 
+                      id="lname" 
+                      name="lname" 
+                      maxlength="20" 
+                      placeholder="Last name.." 
+                      pattern="[A-Za-z-']{2,}" 
+                      title="Cannot contain numbers or symbols except ' or -" 
+                      required
+                  >
+                  <label for="email" class="sr-only">
+                      Email
+                  </label>
+                  <input 
+                      type="email" 
+                      id="email" 
+                      name="email" 
+                      maxlength="50" 
+                      placeholder="Email address.." 
+                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                      title="Must be a valid email address" 
+                      required
+                  >
+                  <label for="subject" class="sr-only">
+                      Subject
+                  </label>
+                  <input 
+                      type="text" 
+                      id="subject" 
+                      name="subject" 
+                      maxlength="12" 
+                      placeholder="Investor, Filmmaker or Distributor?" 
+                      required 
+                  >
+                      <label for="confirm">
+                          I agree to 
+                              <span class="love-ya-like-a-sister-regular">
+                                  indieFUND's 
+                              </span>
+                                  <a class="white" href="terms.html" target="_blank">
+                                      Terms of service
+                                  </a>
+                      </label>
+                          <input 
+                              type="checkbox" 
+                              id="confirm" 
+                              name="confirm" 
+                              value="confirm" 
+                              required
+                          >
+                  <input 
+                      type="submit" 
+                      formenctype="application/x-www-form-urlencoded" 
+                      value="Request"
+                  >
+              </form>
+        </div>
+        <div class="modal-footer">
+          <h3 class="tag_line_text roboto-text">
+              Where fans fund films
+          </h3>
+        </div>
+      </div>
+    </div>
+    <header>
+      <h2 class="enquire_text road-rage-regular modalBtn">
+          Enquire
+      </h2>
+        <a href="index.html">
+            <h1 class="main_logo_text love-ya-like-a-sister-regular">
+                indieFUND
+            </h1>
+        </a>
+          <h2 class="tag_line_text roboto-text">
+              Where fans fund films
+          </h2>
+    </header> 
+    <nav id="info">
+      <a href="investors.html#info">
+          <h2 class="investor_text roboto-categories">
+              INVESTORS
+          </h2>
+      </a>
+          <br>
+      <a href="filmmakers.html#info">
+          <h2 class="filmmakers_text roboto-categories">
+              FILMMAKERS
+          </h2>
+      </a>
+          <br>
+      <a href="distributors.html#info">
+          <h2 class="distributors_text roboto-categories">
+              DISTRIBUTORS
+          </h2>
+      </a>
+    </nav>
+    <main>
+      <div class="info_slide info_page left" id="terms_info">
+        <h3>
+          Terms of Service
+        </h3>
+          <p>
+            These Terms of Service are issued by indieFUND to users of this website. They shall continue in perpetuity. 
+            All users must indicate their acceptance of this Agreement before using the website. If users do not agree 
+            with any part of these terms they must refrain from using the website.
+          </p>
+          <p>
+              These terms should be viewed in conjunction with our 
+              <a class="gry" href="terms.html#privacy">
+                <u>
+                  Privacy Policy
+                </u>
+              </a>
+              .
+          </p>
+          <p>
+            indieFUND reserve the right to amend or withhold its services without notice.
+          </p>
+          <p>
+            We accept no legal responsibility for any events caused to users when accessing this site. 
+            Although we make concerted efforts, we cannot guarantee that the website will always be free from viruses. 
+            As such, we are not liable for any loss or damage caused to your computer equipment, programs or data. 
+            It is the user's responsibility to ensure the security of their internet connection.
+          </p>
+          <p>
+            Users may not interfere with, damage or disrupt any part of this website.
+          </p>
+          <p>
+              This website was designed by <a href="https://www.brvty.online" target="_blank" class="lexend-giga-logo" aria-label="A link to BRVTY online web services">BRVTY</a> online web services.
+          </p>
+        <h4>
+          THIRD PARTY CONTENT
+        </h4>
+          <p>
+            Some sections of this website may contain information pertaining to related business activities of third party affiliates, 
+            which users of indieFUND may find of interest. indieFUND is not responsible for these service providers, their websites or 
+            the content displayed there in. For any enquiries relating to to third party websites, products or services, please contact 
+            the service provider directly.
+          </p>
+      </div>
+      <div class="info_slide info_page left">
+        <h4>
+          COMMERCIAL CONTENT
+        </h4>
+          <p>
+            indieFUND is the owner, licensee or participant of all intellectual property rights disclosed on the Site.  
+            All rights are reserved and protected by copyright laws worldwide.
+          </p>
+          <p>
+            indieFUND asserts their right to be acknowledged as the owners of the material on the website.
+          </p>
+          <p>
+            The information contained on this website is provided expressly for the purpose of informing the reader of indieFUND's commercial intentions.
+          </p>
+          <p>
+            In accessing the website, users acknowledge and agrees that:
+          </p>
+            <ol>
+              <li>
+                Its content must not be duplicated or distributed in any way without prior permission from indieFUND.
+              </li>
+              <li>
+                Content may not be download and altered in any way.
+              </li>
+            </ol>
+        <h4>
+          SUBMISSIONS
+        </h4>
+            <p>
+              indieFUND is unable to accept unsolicited material. All ideas, loglines, treatments, outlines, 
+              screenplays and other creative content received by any means without prior consent, will be discarded.
+            </p>
+      </div>
+      <div class="info_slide info_page left">
+        <h4>
+          INVESTMENT RISKS
+        </h4>
+          <p>
+            Investing in any business venture involves an element of risk. The film industry is highly speculative and, 
+            like other business ventures, is risky. No investment in a motion picture is guaranteed to provide financial success. 
+            Revenues will depend on the acceptance of the motion picture by audiences whose reaction cannot be predicted. 
+            Commercial success also depends on a motion picture’s comparison to other competing motion pictures released at or around the same time. 
+            General economic conditions can have an effect on success, as can tangible and intangible scenarios that can change at any time in any market. 
+            New technical developments could reduce the costs of producing and distributing motion pictures and result in increased competition in the 
+            market place. Shifting market trends or new forms of entertainment could reduce the market value of motion pictures. 
+            It is impossible to predict in advance what overall effect these factors, perceived here or otherwise, may have on the success of a motion picture.
+          </p>
+          <p>
+            indieFUND itself is recently formed and is subject to all the risks associated with the progress of a new business, 
+            including no operational history and minimal net worth.
+            Aside from the above risks, indieFUND’s success depends on industry participation and acceptance, obtaining satisfactory distributor 
+            contracts with a distributor(s) that remain solvent and completion of all necessary deliverables.
+          </p>
+          <p>
+            To participate in filmmaking activities through this site, an information pack must be requested and the enclosed forms returned completed, 
+            with the information provided verified and accepted by indieFUND.
+          </p>
+      </div>
+      <div id="privacy" class="info_slide info_page left">
+        <h3>
+          Privacy Policy
+        </h3>
+          <p>
+            This Privacy Policy describes the way we handle any personal data that you provide to us. In accordance with the Data Protection Act 1998, 
+            the data controller is indieFUND.
+          </p>
+          <p>
+            <strong>
+              The indieFUND website does not use Cookies.
+            </strong>
+          </p>
+          <p>
+            We may collect and process the following data about you:
+          </p>
+            <ul>
+                <li>
+                  Information that you provide by filling in forms on the Site
+                </li>
+                <li>
+                  If you contact us requesting further material or services, we may keep a record of correspondence
+                </li>
+            </ul>
+          <p>
+            We cannot guarantee the security of data you transmit through the Site but we use procedures to prevent unauthorised access to information once it's received.
+          </p>
+          <p>
+            We may use information you provide us to supply information and updates about our activities, products or services.
+          </p>
+          <p>
+            As per our terms, any unsolicited material received either electronically or through traditional mail services will be disposed of unread.
+          </p>
+          <p>
+            We may disclose your personal information to third parties:
+          </p>
+            <ul>
+              <li>
+                If indieFUND is acquired by a third party, as it will be considered an asset.
+              </li>
+              <li>
+                If we are obliged to do so in order to comply with a legal obligation, or to protect the rights, 
+                property, or safety of indieFUND. This includes fraud protection.
+              </li>
+            </ul>
+          <p>
+            We do not process your personal data for marketing purposes.
+          </p>
+          <p>
+            The Act gives you the right to access information held about you.
+          </p>
+          <p>
+            Any questions or requests regarding your data should be sent via 
+            <a class="gry" href="mailto:data@indiefund.co.uk">
+              <u>
+                email
+              </u>
+            </a> 
+            with the subject marked "Privacy".
+      </div>
+      <div class="info_slide info_page left">
+        <h4>
+          DEFINITIONS
+        </h4>
+          <p>
+            Except to the extent expressly provided otherwise, in this Agreement:
+          </p>
+          <p>
+            "
+            <b>Website</b>
+            " or "
+            <b>Site</b>
+            " means the domain www.indieFUND.co.uk and all its pages.
+          </p>
+          <p>
+            "
+            <b>Us</b>
+            " or "
+            <b>We</b>
+            " means owners of the website indieFUND.
+          </p>
+          <p>
+            "
+            <b>You</b>
+            " means visitors to the domain www.indieFUND.co.uk and all its pages.
+          </p>
+          <p>
+            "
+            <b>the Act</b>
+            " means the Data Protection Act 1998.
+          </p>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <a href="about.html#info">
+            About
+        </a>
+          <span class="dots">
+              &sdot;
+          </span>
+            <a href="index.html" class="footer_logo_text love-ya-like-a-sister-regular">
+              indieFUND
+            </a>
+              <span class="dots">
+                  &sdot;
+              </span>
+          <a href="terms.html#terms_info" class="active">
+              Terms
+          </a>
+      </div>
+        <span class="toTop">
+            &#8673;
+        </span>
+      <br>
+    </footer>
+      <script src="assets/js/modal.js"></script>
+      <script src="assets/js/to_top.js"></script>
+  </body>
+</html>
